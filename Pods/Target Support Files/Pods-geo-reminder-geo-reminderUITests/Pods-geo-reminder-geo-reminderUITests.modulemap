@@ -1,0 +1,6 @@
+framework module Pods_geo_reminder_geo_reminderUITests {
+  umbrella header "Pods-geo-reminder-geo-reminderUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_geo_reminderTests {
+  umbrella header "Pods-geo-reminderTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

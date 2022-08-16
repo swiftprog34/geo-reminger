@@ -7,16 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0773797825B14002A0813844 /* Pods_geo_reminder_geo_reminderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98E15A733E09477CD452228 /* Pods_geo_reminder_geo_reminderUITests.framework */; };
+		357AAEE228AA6D2400A1FDED /* SpeechRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AAEE128AA6D2400A1FDED /* SpeechRecognitionViewController.swift */; };
+		357AAEE428AA6D3700A1FDED /* SpeechRecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AAEE328AA6D3700A1FDED /* SpeechRecognitionView.swift */; };
+		357AAEE628AA6D4400A1FDED /* SpeechRecognitionContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AAEE528AA6D4400A1FDED /* SpeechRecognitionContract.swift */; };
+		357AAEE828AA6D5600A1FDED /* SpeechRecognitionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AAEE728AA6D5600A1FDED /* SpeechRecognitionConfigurator.swift */; };
+		357AAEEA28AA6D6100A1FDED /* SpeechRecognitionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AAEE928AA6D6100A1FDED /* SpeechRecognitionPresenter.swift */; };
+		35856081628F925BB7D3E04F /* Pods_geo_reminderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0271D206819F2E29B4FA08CB /* Pods_geo_reminderTests.framework */; };
+		35D07C9028AAA0DE007C82DB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D07C8F28AAA0DE007C82DB /* CoreDataManager.swift */; };
+		35D07C9328AAA56D007C82DB /* NoteCreationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D07C9228AAA56C007C82DB /* NoteCreationModel.swift */; };
 		35F0A920289FC2B30011C7C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A91F289FC2B30011C7C1 /* AppDelegate.swift */; };
 		35F0A922289FC2B30011C7C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A921289FC2B30011C7C1 /* SceneDelegate.swift */; };
 		35F0A924289FC2B30011C7C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A923289FC2B30011C7C1 /* ViewController.swift */; };
-		35F0A927289FC2B30011C7C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F0A925289FC2B30011C7C1 /* Main.storyboard */; };
 		35F0A92A289FC2B30011C7C1 /* geo_reminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A928289FC2B30011C7C1 /* geo_reminder.xcdatamodeld */; };
 		35F0A92C289FC2B50011C7C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F0A92B289FC2B50011C7C1 /* Assets.xcassets */; };
 		35F0A92F289FC2B50011C7C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F0A92D289FC2B50011C7C1 /* LaunchScreen.storyboard */; };
 		35F0A93A289FC2B50011C7C1 /* geo_reminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A939289FC2B50011C7C1 /* geo_reminderTests.swift */; };
 		35F0A944289FC2B50011C7C1 /* geo_reminderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A943289FC2B50011C7C1 /* geo_reminderUITests.swift */; };
 		35F0A946289FC2B50011C7C1 /* geo_reminderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A945289FC2B50011C7C1 /* geo_reminderUITestsLaunchTests.swift */; };
+		35F0A954289FC9A00011C7C1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A953289FC9A00011C7C1 /* Coordinator.swift */; };
+		35F0A956289FCA130011C7C1 /* Coordinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A955289FCA130011C7C1 /* Coordinable.swift */; };
+		35F0A95A289FCAC80011C7C1 /* MapConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A959289FCAC80011C7C1 /* MapConfigurator.swift */; };
+		35F0A95C289FCB0F0011C7C1 /* MapContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A95B289FCB0F0011C7C1 /* MapContract.swift */; };
+		35F0A95E289FCB460011C7C1 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A95D289FCB460011C7C1 /* MapPresenter.swift */; };
+		35F0A962289FCBF80011C7C1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A961289FCBF80011C7C1 /* MapViewController.swift */; };
+		35F0A964289FCC110011C7C1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A963289FCC110011C7C1 /* MapView.swift */; };
+		EFB3EFD1411FD47E710849F0 /* Pods_geo_reminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAAF4342669D0E0CE431D722 /* Pods_geo_reminder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +53,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0271D206819F2E29B4FA08CB /* Pods_geo_reminderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_geo_reminderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B46941B10AFEEA3D3C3F031 /* Pods-geo-reminderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geo-reminderTests.debug.xcconfig"; path = "Target Support Files/Pods-geo-reminderTests/Pods-geo-reminderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		18AEE8652C57CBB13C275AD0 /* Pods-geo-reminderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geo-reminderTests.release.xcconfig"; path = "Target Support Files/Pods-geo-reminderTests/Pods-geo-reminderTests.release.xcconfig"; sourceTree = "<group>"; };
+		357AAEE128AA6D2400A1FDED /* SpeechRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionViewController.swift; sourceTree = "<group>"; };
+		357AAEE328AA6D3700A1FDED /* SpeechRecognitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionView.swift; sourceTree = "<group>"; };
+		357AAEE528AA6D4400A1FDED /* SpeechRecognitionContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionContract.swift; sourceTree = "<group>"; };
+		357AAEE728AA6D5600A1FDED /* SpeechRecognitionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionConfigurator.swift; sourceTree = "<group>"; };
+		357AAEE928AA6D6100A1FDED /* SpeechRecognitionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionPresenter.swift; sourceTree = "<group>"; };
+		35D07C8F28AAA0DE007C82DB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		35D07C9228AAA56C007C82DB /* NoteCreationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCreationModel.swift; sourceTree = "<group>"; };
 		35F0A91C289FC2B30011C7C1 /* geo-reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "geo-reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F0A91F289FC2B30011C7C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F0A921289FC2B30011C7C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		35F0A923289FC2B30011C7C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		35F0A926289FC2B30011C7C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35F0A929289FC2B30011C7C1 /* geo_reminder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = geo_reminder.xcdatamodel; sourceTree = "<group>"; };
 		35F0A92B289FC2B50011C7C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35F0A92E289FC2B50011C7C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +76,19 @@
 		35F0A93F289FC2B50011C7C1 /* geo-reminderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "geo-reminderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F0A943289FC2B50011C7C1 /* geo_reminderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geo_reminderUITests.swift; sourceTree = "<group>"; };
 		35F0A945289FC2B50011C7C1 /* geo_reminderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geo_reminderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		35F0A953289FC9A00011C7C1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		35F0A955289FCA130011C7C1 /* Coordinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinable.swift; sourceTree = "<group>"; };
+		35F0A959289FCAC80011C7C1 /* MapConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapConfigurator.swift; sourceTree = "<group>"; };
+		35F0A95B289FCB0F0011C7C1 /* MapContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapContract.swift; sourceTree = "<group>"; };
+		35F0A95D289FCB460011C7C1 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		35F0A961289FCBF80011C7C1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		35F0A963289FCC110011C7C1 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		381C2730099B4A2DCF34B78E /* Pods-geo-reminder-geo-reminderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geo-reminder-geo-reminderUITests.release.xcconfig"; path = "Target Support Files/Pods-geo-reminder-geo-reminderUITests/Pods-geo-reminder-geo-reminderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7C4CB80B93F41E448748E212 /* Pods-geo-reminder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geo-reminder.debug.xcconfig"; path = "Target Support Files/Pods-geo-reminder/Pods-geo-reminder.debug.xcconfig"; sourceTree = "<group>"; };
+		7F8ACD0DB673F7EC13D54B3D /* Pods-geo-reminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geo-reminder.release.xcconfig"; path = "Target Support Files/Pods-geo-reminder/Pods-geo-reminder.release.xcconfig"; sourceTree = "<group>"; };
+		8F11902D01532366F5CA1C03 /* Pods-geo-reminder-geo-reminderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geo-reminder-geo-reminderUITests.debug.xcconfig"; path = "Target Support Files/Pods-geo-reminder-geo-reminderUITests/Pods-geo-reminder-geo-reminderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CAAF4342669D0E0CE431D722 /* Pods_geo_reminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_geo_reminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D98E15A733E09477CD452228 /* Pods_geo_reminder_geo_reminderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_geo_reminder_geo_reminderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB3EFD1411FD47E710849F0 /* Pods_geo_reminder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35856081628F925BB7D3E04F /* Pods_geo_reminderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +112,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0773797825B14002A0813844 /* Pods_geo_reminder_geo_reminderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		357AAEE028AA6CEF00A1FDED /* SpeechRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				357AAEE128AA6D2400A1FDED /* SpeechRecognitionViewController.swift */,
+				357AAEE328AA6D3700A1FDED /* SpeechRecognitionView.swift */,
+				357AAEE528AA6D4400A1FDED /* SpeechRecognitionContract.swift */,
+				357AAEE728AA6D5600A1FDED /* SpeechRecognitionConfigurator.swift */,
+				357AAEE928AA6D6100A1FDED /* SpeechRecognitionPresenter.swift */,
+			);
+			path = SpeechRecognition;
+			sourceTree = "<group>";
+		};
+		35D07C8D28AAA000007C82DB /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		35D07C8E28AAA0C4007C82DB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				35D07C8F28AAA0DE007C82DB /* CoreDataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		35D07C9128AAA532007C82DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				35D07C9228AAA56C007C82DB /* NoteCreationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		35F0A913289FC2B30011C7C1 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +161,8 @@
 				35F0A938289FC2B50011C7C1 /* geo-reminderTests */,
 				35F0A942289FC2B50011C7C1 /* geo-reminderUITests */,
 				35F0A91D289FC2B30011C7C1 /* Products */,
+				5C28BE36100938CE83C56780 /* Pods */,
+				4B36E96F89B64618F54E0829 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +179,13 @@
 		35F0A91E289FC2B30011C7C1 /* geo-reminder */ = {
 			isa = PBXGroup;
 			children = (
+				35D07C9128AAA532007C82DB /* Models */,
+				35D07C8E28AAA0C4007C82DB /* Services */,
+				35F0A957289FCAB20011C7C1 /* Scenes */,
+				35F0A952289FC98F0011C7C1 /* Coordinators */,
 				35F0A91F289FC2B30011C7C1 /* AppDelegate.swift */,
 				35F0A921289FC2B30011C7C1 /* SceneDelegate.swift */,
 				35F0A923289FC2B30011C7C1 /* ViewController.swift */,
-				35F0A925289FC2B30011C7C1 /* Main.storyboard */,
 				35F0A92B289FC2B50011C7C1 /* Assets.xcassets */,
 				35F0A92D289FC2B50011C7C1 /* LaunchScreen.storyboard */,
 				35F0A930289FC2B50011C7C1 /* Info.plist */,
@@ -130,6 +211,60 @@
 			path = "geo-reminderUITests";
 			sourceTree = "<group>";
 		};
+		35F0A952289FC98F0011C7C1 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				35F0A953289FC9A00011C7C1 /* Coordinator.swift */,
+				35F0A955289FCA130011C7C1 /* Coordinable.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		35F0A957289FCAB20011C7C1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				35D07C8D28AAA000007C82DB /* Notes */,
+				357AAEE028AA6CEF00A1FDED /* SpeechRecognition */,
+				35F0A958289FCAB90011C7C1 /* Map */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		35F0A958289FCAB90011C7C1 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				35F0A959289FCAC80011C7C1 /* MapConfigurator.swift */,
+				35F0A95B289FCB0F0011C7C1 /* MapContract.swift */,
+				35F0A95D289FCB460011C7C1 /* MapPresenter.swift */,
+				35F0A961289FCBF80011C7C1 /* MapViewController.swift */,
+				35F0A963289FCC110011C7C1 /* MapView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		4B36E96F89B64618F54E0829 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAAF4342669D0E0CE431D722 /* Pods_geo_reminder.framework */,
+				D98E15A733E09477CD452228 /* Pods_geo_reminder_geo_reminderUITests.framework */,
+				0271D206819F2E29B4FA08CB /* Pods_geo_reminderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C28BE36100938CE83C56780 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C4CB80B93F41E448748E212 /* Pods-geo-reminder.debug.xcconfig */,
+				7F8ACD0DB673F7EC13D54B3D /* Pods-geo-reminder.release.xcconfig */,
+				8F11902D01532366F5CA1C03 /* Pods-geo-reminder-geo-reminderUITests.debug.xcconfig */,
+				381C2730099B4A2DCF34B78E /* Pods-geo-reminder-geo-reminderUITests.release.xcconfig */,
+				0B46941B10AFEEA3D3C3F031 /* Pods-geo-reminderTests.debug.xcconfig */,
+				18AEE8652C57CBB13C275AD0 /* Pods-geo-reminderTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35F0A949289FC2B50011C7C1 /* Build configuration list for PBXNativeTarget "geo-reminder" */;
 			buildPhases = (
+				58A92D3B26652D8C14175902 /* [CP] Check Pods Manifest.lock */,
 				35F0A918289FC2B30011C7C1 /* Sources */,
 				35F0A919289FC2B30011C7C1 /* Frameworks */,
 				35F0A91A289FC2B30011C7C1 /* Resources */,
+				1E138F70CDE03BE97A328FDF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +291,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35F0A94C289FC2B50011C7C1 /* Build configuration list for PBXNativeTarget "geo-reminderTests" */;
 			buildPhases = (
+				B5F2A3DBC75D6E50E06B2944 /* [CP] Check Pods Manifest.lock */,
 				35F0A931289FC2B50011C7C1 /* Sources */,
 				35F0A932289FC2B50011C7C1 /* Frameworks */,
 				35F0A933289FC2B50011C7C1 /* Resources */,
@@ -172,9 +310,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35F0A94F289FC2B50011C7C1 /* Build configuration list for PBXNativeTarget "geo-reminderUITests" */;
 			buildPhases = (
+				62A16FBB1155897B6F9B48E6 /* [CP] Check Pods Manifest.lock */,
 				35F0A93B289FC2B50011C7C1 /* Sources */,
 				35F0A93C289FC2B50011C7C1 /* Frameworks */,
 				35F0A93D289FC2B50011C7C1 /* Resources */,
+				6CFF06F0E6D4E59BB9E840DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,7 +376,6 @@
 			files = (
 				35F0A92F289FC2B50011C7C1 /* LaunchScreen.storyboard in Resources */,
 				35F0A92C289FC2B50011C7C1 /* Assets.xcassets in Resources */,
-				35F0A927289FC2B30011C7C1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,13 +395,130 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E138F70CDE03BE97A328FDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-geo-reminder/Pods-geo-reminder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-geo-reminder/Pods-geo-reminder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-geo-reminder/Pods-geo-reminder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58A92D3B26652D8C14175902 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-geo-reminder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62A16FBB1155897B6F9B48E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-geo-reminder-geo-reminderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CFF06F0E6D4E59BB9E840DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-geo-reminder-geo-reminderUITests/Pods-geo-reminder-geo-reminderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-geo-reminder-geo-reminderUITests/Pods-geo-reminder-geo-reminderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-geo-reminder-geo-reminderUITests/Pods-geo-reminder-geo-reminderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5F2A3DBC75D6E50E06B2944 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-geo-reminderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		35F0A918289FC2B30011C7C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35F0A962289FCBF80011C7C1 /* MapViewController.swift in Sources */,
+				357AAEE828AA6D5600A1FDED /* SpeechRecognitionConfigurator.swift in Sources */,
+				35F0A95C289FCB0F0011C7C1 /* MapContract.swift in Sources */,
 				35F0A924289FC2B30011C7C1 /* ViewController.swift in Sources */,
+				35D07C9028AAA0DE007C82DB /* CoreDataManager.swift in Sources */,
+				35F0A964289FCC110011C7C1 /* MapView.swift in Sources */,
+				357AAEE228AA6D2400A1FDED /* SpeechRecognitionViewController.swift in Sources */,
+				35F0A95E289FCB460011C7C1 /* MapPresenter.swift in Sources */,
 				35F0A92A289FC2B30011C7C1 /* geo_reminder.xcdatamodeld in Sources */,
+				357AAEEA28AA6D6100A1FDED /* SpeechRecognitionPresenter.swift in Sources */,
+				35F0A956289FCA130011C7C1 /* Coordinable.swift in Sources */,
+				35F0A954289FC9A00011C7C1 /* Coordinator.swift in Sources */,
+				35D07C9328AAA56D007C82DB /* NoteCreationModel.swift in Sources */,
+				35F0A95A289FCAC80011C7C1 /* MapConfigurator.swift in Sources */,
+				357AAEE428AA6D3700A1FDED /* SpeechRecognitionView.swift in Sources */,
+				357AAEE628AA6D4400A1FDED /* SpeechRecognitionContract.swift in Sources */,
 				35F0A920289FC2B30011C7C1 /* AppDelegate.swift in Sources */,
 				35F0A922289FC2B30011C7C1 /* SceneDelegate.swift in Sources */,
 			);
@@ -301,14 +557,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		35F0A925289FC2B30011C7C1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				35F0A926289FC2B30011C7C1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		35F0A92D289FC2B50011C7C1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -436,6 +684,7 @@
 		};
 		35F0A94A289FC2B50011C7C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C4CB80B93F41E448748E212 /* Pods-geo-reminder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -446,9 +695,10 @@
 				INFOPLIST_FILE = "geo-reminder/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,12 +708,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		35F0A94B289FC2B50011C7C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F8ACD0DB673F7EC13D54B3D /* Pods-geo-reminder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -474,9 +725,10 @@
 				INFOPLIST_FILE = "geo-reminder/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,12 +738,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		35F0A94D289FC2B50011C7C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B46941B10AFEEA3D3C3F031 /* Pods-geo-reminderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +765,7 @@
 		};
 		35F0A94E289FC2B50011C7C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18AEE8652C57CBB13C275AD0 /* Pods-geo-reminderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -532,6 +786,7 @@
 		};
 		35F0A950289FC2B50011C7C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F11902D01532366F5CA1C03 /* Pods-geo-reminder-geo-reminderUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -550,6 +805,7 @@
 		};
 		35F0A951289FC2B50011C7C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 381C2730099B4A2DCF34B78E /* Pods-geo-reminder-geo-reminderUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
