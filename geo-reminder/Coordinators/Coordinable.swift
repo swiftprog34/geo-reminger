@@ -13,6 +13,7 @@ protocol Coordinatable: AnyObject {
     
     func start()
     func openSpeechToTextRecognitionScreen()
+    func openNotesScreen()
     func addChildCoordinator(_ coordinator: Coordinatable)
     func removeChildCoordinator(_ coordinator: Coordinatable)
 }

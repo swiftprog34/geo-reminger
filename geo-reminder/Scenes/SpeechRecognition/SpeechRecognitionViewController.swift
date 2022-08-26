@@ -29,9 +29,19 @@ class SpeechRecognitionViewController: UIViewController, SpeechRecognitionViewab
         }
     }
     
+    func informUser(title: String, text: String) {
+        let alert = UIAlertController(title: title, message: text, preferredStyle: .alert)
+        self.present(alert, animated: true) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                alert.dismiss(animated: true, completion: nil)
+                self.presenter.afterAddNoteAction()
+            }
+        }
+    }
+    
     private func handleOnCustomActions() {
         speechRecognitionView.didPressStopButton = {
-            self.presenter.handleAddNote()
+            self.presenter.handleAddNote(text: self.speechLabel.text!)
         }
     }
     

@@ -5,13 +5,16 @@
 //  Created by Виталий Емельянов on 15.08.2022.
 //
 
-import Foundation
+import UIKit
 import Speech
+import AVFoundation
+
 
 class SpeechRecognitionPresenter: NSObject, SpeechRecognitionPresentable, SFSpeechRecognizerDelegate {
     
     weak var coordinator: Coordinatable?
     weak var view: SpeechRecognitionViewable!
+    lazy var dataManager = (UIApplication.shared.delegate as! AppDelegate).dataManager
     
     /// Объект операции распознавания голоса
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "ru"))
@@ -32,8 +35,50 @@ class SpeechRecognitionPresenter: NSObject, SpeechRecognitionPresentable, SFSpee
         enablingSpeechRecognizer()
     }
     
-    func handleAddNote() {
-        print("Handle add note")
+    func handleAddNote(text: String) {
+        dataManager.createNote(text: text) { result in
+            switch result {
+            case .success(let noteEntity):
+                if let text = noteEntity.text {
+                    print(text)
+                    self.view.informUser(title: "Напоминание успешно создано!", text: "Текст напоминания сохранен на устройстве и вы можете в любой момент просмотреть его или прослушать. Также, напоминание активируется при достижении вами точки, указанной на карте.")
+                }
+            case .failure(let error):
+                print(error)
+                self.view.informUser(title: "Не удалось создать напоминание!", text: "По какой то причине, не удалось сохранить напоминание. Попробуйте снова. Если ошибка останется, сообщите в техподдержку.")
+            }
+        }
+//        if audioEngine.isRunning {
+//            self.audioEngine.stop()
+//            self.recognitionRequest?.endAudio()
+//        }
+//
+//        do {
+//            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord, mode: .default, options: .defaultToSpeaker)
+//            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+//        } catch {
+//            print("audioSession properties weren't set because of an error.")
+//        }
+//
+//        let synthesizer = AVSpeechSynthesizer()
+//        let utterance = AVSpeechUtterance(string: text)
+//        synthesizer.speak(utterance)
+//
+//        do {
+//          disableAVSession()
+//        }
+    }
+    
+    func afterAddNoteAction() {
+        self.coordinator?.start()
+    }
+    
+    private func disableAVSession() {
+        do {
+            try AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+        } catch {
+            print("audioSession properties weren't disable.")
+        }
     }
     
     private func enablingSpeechRecognizer() {

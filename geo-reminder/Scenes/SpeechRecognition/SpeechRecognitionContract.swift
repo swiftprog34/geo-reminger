@@ -9,9 +9,11 @@ import Foundation
 
 protocol SpeechRecognitionViewable: AnyObject {
     func set(text: String)
+    func informUser(title: String, text: String)
 }
 
 protocol SpeechRecognitionPresentable: AnyObject {
     func onViewDidLoad()
-    func handleAddNote()
+    func handleAddNote(text: String)
+    func afterAddNoteAction()
 }

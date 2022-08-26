@@ -18,11 +18,16 @@ class Coordinator: Coordinatable {
     
     func start() {
         let MapViewController = MapConfigurator().configuredViewController(coordinator: self)
+        navigationController.viewControllers.removeAll()
         navigationController.pushViewController(MapViewController, animated: false)
     }
     
     func openSpeechToTextRecognitionScreen() {
         let SpeechRecognitionViewController = SpeechRecognitionConfigurator().configuredViewController(coordinator: self)
         navigationController.pushViewController(SpeechRecognitionViewController, animated: true)
+    }
+    
+    func openNotesScreen() {
+        
     }
 }

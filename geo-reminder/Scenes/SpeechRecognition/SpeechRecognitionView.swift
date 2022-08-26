@@ -9,6 +9,10 @@ import UIKit
 import SnapKit
 
 class SpeechRecognitionView: UIView {
+    
+    private enum Constants {
+        static let descriptionText: String = "Для начала записи текста, начните говорить.\n Вы можете использовать такие слова, как:\nЗапятая, Точка, Новая строка, Вопросительный знак, Восклицательный знак, Двоеточие, Точка с запятой, Тире.\nПри этом, в тексте будут появляться соответсвующие символы. Для окончания записи нажмите кнопку Добавить напоминание"
+    }
 
     //MARK: - Public properties
     var didPressStopButton: (() -> Void)?
@@ -17,6 +21,13 @@ class SpeechRecognitionView: UIView {
     lazy var label: UILabel = {
         let label = UILabel(frame: .zero)
         label.text = "Label"
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    lazy var descriptionLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.text = Constants.descriptionText
         label.numberOfLines = 0
         return label
     }()
@@ -48,16 +59,22 @@ class SpeechRecognitionView: UIView {
     private func addSubviews() {
         addSubview(label)
         addSubview(stopButton)
+        addSubview(descriptionLabel)
     }
     
     private func setupConstraints() {
         label.snp.makeConstraints { make in
-            make.centerY.centerX.equalToSuperview()
+            make.centerX.equalToSuperview()
             make.leading.trailing.equalToSuperview().inset(26)
+            make.top.equalToSuperview().offset(26)
         }
         stopButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(label.snp.bottom).offset(50)
+        }
+        descriptionLabel.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(26)
+            make.top.equalTo(stopButton.snp.bottom).offset(50)
         }
     }
 

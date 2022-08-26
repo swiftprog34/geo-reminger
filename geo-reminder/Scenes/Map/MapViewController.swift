@@ -10,12 +10,15 @@ import CoreLocation
 import MapKit
 
 class MapViewController: UIViewController, MapViewable, UIGestureRecognizerDelegate {
-    
+
     //MARK: Dependencies
     var presenter: MapPresentable!
     lazy var mapView = view as! MapView
     lazy var map = mapView.map
     var gestureRecognizerLongTap: UILongPressGestureRecognizer?
+    
+    // MARK: Properties
+    var data: MapViewModel?
     
     //MARK: Live cycle
     override func loadView() {
@@ -31,10 +34,30 @@ class MapViewController: UIViewController, MapViewable, UIGestureRecognizerDeleg
         lpgr.delaysTouchesBegan = true
         lpgr.delegate = self
         self.map.addGestureRecognizer(lpgr)
+        
+        presenter.afterViewDidLoad()
+        subscribeOnCustomViewActions()
     }
     
     //MARK: Public methods
-    func set(location: CLLocation) {
+    func set(viewModel: MapViewModel) {
+        data = viewModel
+        guard let location = data?.location else {return}
+        self.set(location: location)
+    }
+    
+    func set(countOfNotes: Int) {
+        mapView.setup(for: countOfNotes)
+    }
+    
+    // MARK: Private methods
+    private func subscribeOnCustomViewActions() {
+        mapView.didPressCountOfNotes = { [unowned self] in
+            presenter.countOfNotesLabelTapped()
+        }
+    }
+    
+    private func set(location: CLLocation) {
         DispatchQueue.main.async {
             let pin = MKPointAnnotation()
             pin.coordinate = location.coordinate
@@ -45,7 +68,6 @@ class MapViewController: UIViewController, MapViewable, UIGestureRecognizerDeleg
         }
     }
     
-    // MARK: Private methods
     private func subscribeOnCustomViewActions() {
         //        mapView.didLongTapOnMap = { [unowned self] in
         //                guard let gestureRecognizerLongTap = gestureRecognizerLongTap else {return}

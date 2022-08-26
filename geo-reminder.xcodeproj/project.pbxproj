@@ -8,14 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		0773797825B14002A0813844 /* Pods_geo_reminder_geo_reminderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98E15A733E09477CD452228 /* Pods_geo_reminder_geo_reminderUITests.framework */; };
+		35675AAE28B9479B0031F771 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35675AAD28B9479B0031F771 /* MapViewModel.swift */; };
+		35675AB028B9523F0031F771 /* NotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35675AAF28B9523F0031F771 /* NotesController.swift */; };
+		35675AB228B9524C0031F771 /* NotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35675AB128B9524C0031F771 /* NotesPresenter.swift */; };
+		35675AB528B952670031F771 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35675AB428B952670031F771 /* NotesView.swift */; };
+		35675AB728B9527D0031F771 /* NotesContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35675AB628B9527D0031F771 /* NotesContract.swift */; };
+		35675AB928B9528A0031F771 /* NotesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35675AB828B9528A0031F771 /* NotesConfigurator.swift */; };
 		357AAEE228AA6D2400A1FDED /* SpeechRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AAEE128AA6D2400A1FDED /* SpeechRecognitionViewController.swift */; };
 		357AAEE428AA6D3700A1FDED /* SpeechRecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AAEE328AA6D3700A1FDED /* SpeechRecognitionView.swift */; };
 		357AAEE628AA6D4400A1FDED /* SpeechRecognitionContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AAEE528AA6D4400A1FDED /* SpeechRecognitionContract.swift */; };
 		357AAEE828AA6D5600A1FDED /* SpeechRecognitionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AAEE728AA6D5600A1FDED /* SpeechRecognitionConfigurator.swift */; };
 		357AAEEA28AA6D6100A1FDED /* SpeechRecognitionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AAEE928AA6D6100A1FDED /* SpeechRecognitionPresenter.swift */; };
 		35856081628F925BB7D3E04F /* Pods_geo_reminderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0271D206819F2E29B4FA08CB /* Pods_geo_reminderTests.framework */; };
-		35D07C9028AAA0DE007C82DB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D07C8F28AAA0DE007C82DB /* CoreDataManager.swift */; };
-		35D07C9328AAA56D007C82DB /* NoteCreationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D07C9228AAA56C007C82DB /* NoteCreationModel.swift */; };
+		35B0B51F28B0C5FF000BF01B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0B51E28B0C5FF000BF01B /* DataManager.swift */; };
+		35B0B52128B0C692000BF01B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0B52028B0C692000BF01B /* Note.swift */; };
+		35B0B52428B0C845000BF01B /* NoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0B52328B0C845000BF01B /* NoteEntity.swift */; };
+		35D07C9028AAA0DE007C82DB /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D07C8F28AAA0DE007C82DB /* CoreDataService.swift */; };
 		35F0A920289FC2B30011C7C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A91F289FC2B30011C7C1 /* AppDelegate.swift */; };
 		35F0A922289FC2B30011C7C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A921289FC2B30011C7C1 /* SceneDelegate.swift */; };
 		35F0A924289FC2B30011C7C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0A923289FC2B30011C7C1 /* ViewController.swift */; };
@@ -56,13 +64,21 @@
 		0271D206819F2E29B4FA08CB /* Pods_geo_reminderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_geo_reminderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B46941B10AFEEA3D3C3F031 /* Pods-geo-reminderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geo-reminderTests.debug.xcconfig"; path = "Target Support Files/Pods-geo-reminderTests/Pods-geo-reminderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		18AEE8652C57CBB13C275AD0 /* Pods-geo-reminderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geo-reminderTests.release.xcconfig"; path = "Target Support Files/Pods-geo-reminderTests/Pods-geo-reminderTests.release.xcconfig"; sourceTree = "<group>"; };
+		35675AAD28B9479B0031F771 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		35675AAF28B9523F0031F771 /* NotesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesController.swift; sourceTree = "<group>"; };
+		35675AB128B9524C0031F771 /* NotesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesPresenter.swift; sourceTree = "<group>"; };
+		35675AB428B952670031F771 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		35675AB628B9527D0031F771 /* NotesContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesContract.swift; sourceTree = "<group>"; };
+		35675AB828B9528A0031F771 /* NotesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesConfigurator.swift; sourceTree = "<group>"; };
 		357AAEE128AA6D2400A1FDED /* SpeechRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionViewController.swift; sourceTree = "<group>"; };
 		357AAEE328AA6D3700A1FDED /* SpeechRecognitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionView.swift; sourceTree = "<group>"; };
 		357AAEE528AA6D4400A1FDED /* SpeechRecognitionContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionContract.swift; sourceTree = "<group>"; };
 		357AAEE728AA6D5600A1FDED /* SpeechRecognitionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionConfigurator.swift; sourceTree = "<group>"; };
 		357AAEE928AA6D6100A1FDED /* SpeechRecognitionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionPresenter.swift; sourceTree = "<group>"; };
-		35D07C8F28AAA0DE007C82DB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		35D07C9228AAA56C007C82DB /* NoteCreationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCreationModel.swift; sourceTree = "<group>"; };
+		35B0B51E28B0C5FF000BF01B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		35B0B52028B0C692000BF01B /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		35B0B52328B0C845000BF01B /* NoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEntity.swift; sourceTree = "<group>"; };
+		35D07C8F28AAA0DE007C82DB /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		35F0A91C289FC2B30011C7C1 /* geo-reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "geo-reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F0A91F289FC2B30011C7C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F0A921289FC2B30011C7C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,9 +147,22 @@
 			path = SpeechRecognition;
 			sourceTree = "<group>";
 		};
+		35B0B52228B0C69A000BF01B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				35B0B52328B0C845000BF01B /* NoteEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		35D07C8D28AAA000007C82DB /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				35675AAF28B9523F0031F771 /* NotesController.swift */,
+				35675AB128B9524C0031F771 /* NotesPresenter.swift */,
+				35675AB428B952670031F771 /* NotesView.swift */,
+				35675AB628B9527D0031F771 /* NotesContract.swift */,
+				35675AB828B9528A0031F771 /* NotesConfigurator.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -141,7 +170,8 @@
 		35D07C8E28AAA0C4007C82DB /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				35D07C8F28AAA0DE007C82DB /* CoreDataManager.swift */,
+				35D07C8F28AAA0DE007C82DB /* CoreDataService.swift */,
+				35B0B51E28B0C5FF000BF01B /* DataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -149,7 +179,7 @@
 		35D07C9128AAA532007C82DB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				35D07C9228AAA56C007C82DB /* NoteCreationModel.swift */,
+				35B0B52028B0C692000BF01B /* Note.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +209,7 @@
 		35F0A91E289FC2B30011C7C1 /* geo-reminder */ = {
 			isa = PBXGroup;
 			children = (
+				35B0B52228B0C69A000BF01B /* Entities */,
 				35D07C9128AAA532007C82DB /* Models */,
 				35D07C8E28AAA0C4007C82DB /* Services */,
 				35F0A957289FCAB20011C7C1 /* Scenes */,
@@ -238,6 +269,7 @@
 				35F0A95D289FCB460011C7C1 /* MapPresenter.swift */,
 				35F0A961289FCBF80011C7C1 /* MapViewController.swift */,
 				35F0A963289FCC110011C7C1 /* MapView.swift */,
+				35675AAD28B9479B0031F771 /* MapViewModel.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -505,18 +537,26 @@
 			files = (
 				35F0A962289FCBF80011C7C1 /* MapViewController.swift in Sources */,
 				357AAEE828AA6D5600A1FDED /* SpeechRecognitionConfigurator.swift in Sources */,
+				35675AB228B9524C0031F771 /* NotesPresenter.swift in Sources */,
 				35F0A95C289FCB0F0011C7C1 /* MapContract.swift in Sources */,
+				35675AB028B9523F0031F771 /* NotesController.swift in Sources */,
 				35F0A924289FC2B30011C7C1 /* ViewController.swift in Sources */,
-				35D07C9028AAA0DE007C82DB /* CoreDataManager.swift in Sources */,
+				35675AB928B9528A0031F771 /* NotesConfigurator.swift in Sources */,
+				35D07C9028AAA0DE007C82DB /* CoreDataService.swift in Sources */,
 				35F0A964289FCC110011C7C1 /* MapView.swift in Sources */,
+				35675AB728B9527D0031F771 /* NotesContract.swift in Sources */,
+				35B0B51F28B0C5FF000BF01B /* DataManager.swift in Sources */,
 				357AAEE228AA6D2400A1FDED /* SpeechRecognitionViewController.swift in Sources */,
 				35F0A95E289FCB460011C7C1 /* MapPresenter.swift in Sources */,
 				35F0A92A289FC2B30011C7C1 /* geo_reminder.xcdatamodeld in Sources */,
 				357AAEEA28AA6D6100A1FDED /* SpeechRecognitionPresenter.swift in Sources */,
+				35675AAE28B9479B0031F771 /* MapViewModel.swift in Sources */,
+				35675AB528B952670031F771 /* NotesView.swift in Sources */,
 				35F0A956289FCA130011C7C1 /* Coordinable.swift in Sources */,
 				35F0A954289FC9A00011C7C1 /* Coordinator.swift in Sources */,
-				35D07C9328AAA56D007C82DB /* NoteCreationModel.swift in Sources */,
 				35F0A95A289FCAC80011C7C1 /* MapConfigurator.swift in Sources */,
+				35B0B52428B0C845000BF01B /* NoteEntity.swift in Sources */,
+				35B0B52128B0C692000BF01B /* Note.swift in Sources */,
 				357AAEE428AA6D3700A1FDED /* SpeechRecognitionView.swift in Sources */,
 				357AAEE628AA6D4400A1FDED /* SpeechRecognitionContract.swift in Sources */,
 				35F0A920289FC2B30011C7C1 /* AppDelegate.swift in Sources */,

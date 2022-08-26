@@ -13,6 +13,8 @@ class MapPresenter: NSObject, MapPresentable, CLLocationManagerDelegate {
     weak var coordinator: Coordinatable?
     weak var view: MapViewable!
     lazy var manager = CLLocationManager()
+    lazy var dataManager = (UIApplication.shared.delegate as! AppDelegate).dataManager
+    
     var completion: ((CLLocation) -> Void)?
     //MARK: Initializers
     
@@ -22,12 +24,24 @@ class MapPresenter: NSObject, MapPresentable, CLLocationManagerDelegate {
     
     func onViewDidLoad() {
         getUserLocation { location in
-            self.view.set(location: location)
+            let data = MapViewModel(
+                countOfNotes: self.dataManager.getCountOfNotes(),
+                location: location)
+            self.view.set(viewModel: data)
         }
+    }
+    
+    func afterViewDidLoad() {
+        let countOfNotes = self.dataManager.getCountOfNotes()
+        self.view.set(countOfNotes: countOfNotes)
     }
     
     func prepareForSpeechRecognition() {
         self.coordinator?.openSpeechToTextRecognitionScreen()
+    }
+    
+    func countOfNotesLabelTapped() {
+        print("Go to notes")
     }
     
     //MARK: Private methods

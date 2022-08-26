@@ -9,10 +9,13 @@ import Foundation
 import CoreLocation
 
 protocol MapViewable: AnyObject {
-    func set(location: CLLocation)
+    func set(viewModel: MapViewModel)
+    func set(countOfNotes: Int)
 }
 
 protocol MapPresentable: AnyObject {
     func onViewDidLoad()
+    func afterViewDidLoad()
     func prepareForSpeechRecognition()
+    func countOfNotesLabelTapped()
 }
