@@ -13,7 +13,7 @@ class Coordinator: Coordinatable {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        navigationController.isNavigationBarHidden = true
+        navigationController.isNavigationBarHidden = false
     }
     
     func start() {
@@ -28,6 +28,7 @@ class Coordinator: Coordinatable {
     }
     
     func openNotesScreen() {
-        
+        let NotesViewController = NotesConfigurator().configuredViewController(coordinator: self)
+        navigationController.pushViewController(NotesViewController, animated: true)
     }
 }

@@ -19,6 +19,7 @@ class MapViewController: UIViewController, MapViewable, UIGestureRecognizerDeleg
     
     // MARK: Properties
     var data: MapViewModel?
+    var notesButton: UIBarButtonItem?
     
     //MARK: Live cycle
     override func loadView() {
@@ -37,6 +38,10 @@ class MapViewController: UIViewController, MapViewable, UIGestureRecognizerDeleg
         
         presenter.afterViewDidLoad()
         subscribeOnCustomViewActions()
+        
+        self.title = "Карта"
+        notesButton = UIBarButtonItem(title: "Все", style: .done, target: self, action: #selector(openNotes))
+        self.navigationItem.leftBarButtonItem  = notesButton
     }
     
     //MARK: Public methods
@@ -47,7 +52,8 @@ class MapViewController: UIViewController, MapViewable, UIGestureRecognizerDeleg
     }
     
     func set(countOfNotes: Int) {
-        mapView.setup(for: countOfNotes)
+        notesButton?.title = "Все: \(countOfNotes)"
+//        mapView.setup(for: countOfNotes)
     }
     
     // MARK: Private methods
@@ -68,7 +74,7 @@ class MapViewController: UIViewController, MapViewable, UIGestureRecognizerDeleg
         }
     }
     
-    private func subscribeOnCustomViewActions() {
+//    private func subscribeOnCustomViewActions() {
         //        mapView.didLongTapOnMap = { [unowned self] in
         //                guard let gestureRecognizerLongTap = gestureRecognizerLongTap else {return}
         //                if gestureRecognizerLongTap.state != UIGestureRecognizer.State.ended {
@@ -86,7 +92,7 @@ class MapViewController: UIViewController, MapViewable, UIGestureRecognizerDeleg
         //                print("Tap")
         //            }
         //        }
-    }
+//    }
     
     @objc private func handleLongPress(gestureRecognizer: UILongPressGestureRecognizer) {
         if gestureRecognizer.state != UIGestureRecognizer.State.ended {
@@ -105,4 +111,7 @@ class MapViewController: UIViewController, MapViewable, UIGestureRecognizerDeleg
         }
     }
     
+    @objc private func openNotes() {
+        presenter.countOfNotesLabelTapped()
+    }
 }

@@ -66,7 +66,7 @@ class SpeechRecognitionView: UIView {
         label.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.leading.trailing.equalToSuperview().inset(26)
-            make.top.equalToSuperview().offset(26)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top)
         }
         stopButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()

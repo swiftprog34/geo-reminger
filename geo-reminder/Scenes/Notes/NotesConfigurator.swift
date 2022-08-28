@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class NotesConfigurator {
+    func configuredViewController(coordinator: Coordinatable?) -> NotesController {
+        let viewController = NotesController()
+        let presenter = NotesPresenter(view: viewController)
+        presenter.coordinator = coordinator
+        viewController.presenter = presenter
+        return viewController
+    }
+}

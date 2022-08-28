@@ -41,7 +41,7 @@ class MapPresenter: NSObject, MapPresentable, CLLocationManagerDelegate {
     }
     
     func countOfNotesLabelTapped() {
-        print("Go to notes")
+        self.coordinator?.openNotesScreen()
     }
     
     //MARK: Private methods

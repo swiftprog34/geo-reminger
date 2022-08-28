@@ -74,10 +74,11 @@ class MapView: UIView {
     
     private func setupConstraints() {
         map.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalTo(safeAreaLayoutGuide.snp.top)
+            make.leading.trailing.bottom.equalToSuperview()
         }
         countNotesUILabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(26)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top)
             make.leading.equalToSuperview().offset(26)
         }
     }

@@ -6,3 +6,20 @@
 //
 
 import Foundation
+
+protocol NotesViewable: AnyObject {
+    func set(viewModels: [NotesCellViewModel])
+}
+
+protocol NotesPresentable: AnyObject {
+    func onViewDidLoad()
+    func handleSelectNote(with index: Int)
+}
+
+protocol Reusable: AnyObject {}
+
+extension Reusable {
+    static var reuseIdentifier: String {
+        return String(describing: self)
+    }
+}

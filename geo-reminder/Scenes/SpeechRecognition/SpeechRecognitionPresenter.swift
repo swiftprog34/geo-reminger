@@ -7,8 +7,6 @@
 
 import UIKit
 import Speech
-import AVFoundation
-
 
 class SpeechRecognitionPresenter: NSObject, SpeechRecognitionPresentable, SFSpeechRecognizerDelegate {
     
@@ -36,6 +34,11 @@ class SpeechRecognitionPresenter: NSObject, SpeechRecognitionPresentable, SFSpee
     }
     
     func handleAddNote(text: String) {
+        if audioEngine.isRunning {
+            self.audioEngine.stop()
+            self.recognitionRequest?.endAudio()
+        }
+        
         dataManager.createNote(text: text) { result in
             switch result {
             case .success(let noteEntity):
@@ -48,37 +51,10 @@ class SpeechRecognitionPresenter: NSObject, SpeechRecognitionPresentable, SFSpee
                 self.view.informUser(title: "Не удалось создать напоминание!", text: "По какой то причине, не удалось сохранить напоминание. Попробуйте снова. Если ошибка останется, сообщите в техподдержку.")
             }
         }
-//        if audioEngine.isRunning {
-//            self.audioEngine.stop()
-//            self.recognitionRequest?.endAudio()
-//        }
-//
-//        do {
-//            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord, mode: .default, options: .defaultToSpeaker)
-//            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-//        } catch {
-//            print("audioSession properties weren't set because of an error.")
-//        }
-//
-//        let synthesizer = AVSpeechSynthesizer()
-//        let utterance = AVSpeechUtterance(string: text)
-//        synthesizer.speak(utterance)
-//
-//        do {
-//          disableAVSession()
-//        }
     }
     
     func afterAddNoteAction() {
         self.coordinator?.start()
-    }
-    
-    private func disableAVSession() {
-        do {
-            try AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
-        } catch {
-            print("audioSession properties weren't disable.")
-        }
     }
     
     private func enablingSpeechRecognizer() {
